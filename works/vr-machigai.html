@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR まちがい探し | 宮﨑 左京</title>
+  <link rel="stylesheet" href="../css/work.css">
+  <style>
+    .code-block {
+      background: #0d1117; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.25rem 1.5rem; overflow-x: auto;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.8rem; line-height: 1.75; color: #c9d1d9;
+    }
+    .kw { color: #ff7b72; }
+    .tp { color: #ffa657; }
+    .cm { color: #6e7681; font-style: italic; }
+    .mt { color: #d2a8ff; }
+    .nm { color: #79c0ff; }
+    .arch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .arch-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem;
+    }
+    .arch-card h4 { font-size: 0.78rem; color: var(--accent); margin-bottom: 0.5rem; font-family: monospace; }
+    .arch-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+    @media (max-width: 600px) { .arch-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">SM</a>
+  <a class="nav-back" href="../index.html#works">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4L6 8l4 4"/></svg>
+    Works 一覧
+  </a>
+</nav>
+
+<div class="work-hero">
+  <div class="work-hero-inner">
+    <p class="work-cat">03 — Artechs Works / VR Game</p>
+    <h1 class="work-title">VR まちがい探し</h1>
+    <p class="work-tagline">絵本『ミッケ！』の世界に入り込んだような、おもちゃ部屋を舞台にした3次元空間間違い探しVR体験</p>
+    <div class="work-meta">
+      <div class="meta-item"><span class="meta-label">形態</span><span class="meta-value">チーム開発（Artechs）</span></div>
+      <div class="meta-item"><span class="meta-label">デバイス</span><span class="meta-value">Meta Quest</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="work-content">
+
+  <!-- 概要 -->
+  <div class="ws">
+    <p class="ws-label">Overview</p>
+    <h2 class="ws-title">概要</h2>
+    <div class="ws-body">
+      <p>
+        紙面から空間へ。従来の「間違い探し」をVRの3次元インタラクションへと拡張し、新たな体験価値を創出するコンテンツ。
+        絵本『ミッケ！』のような、おもちゃが溢れた部屋の中に実際に入り込んで、周囲を見回しながら間違いを探す没入感を実現した。
+      </p>
+      <p>
+        2つの空間（正解・不正解）を用意し、VR空間内でオブジェクトを掴んで選択するインタラクションで間違いを探す設計。
+        ゲームプランナーとしての仕様設計から、メインプログラマーとしてのシステム実装まで一貫して担当した。
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ギャラリー -->
+  <div class="ws">
+    <p class="ws-label">Gallery</p>
+    <h2 class="ws-title">フォト</h2>
+    <div class="gallery">
+      <div class="gallery-main" onclick="openLightbox(this)">
+        <img src="img/vr-machigai_00.jpg" alt="VRまちがい探し — ゲーム画面 (間違い前)">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/vr-machigai_01.jpg" alt="VRまちがい探し — ゲーム画面 (間違い後)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 動画 -->
+  <div class="ws">
+    <p class="ws-label">Media</p>
+    <h2 class="ws-title">プレイ動画</h2>
+    <div class="media-grid">
+      <div class="yt-wrap">
+        <!--
+          YouTube埋め込み「VRまちがい探し」: srcを実際のURLに変更
+          例: src="https://www.youtube.com/embed/XXXXXXXXXX"
+        -->
+        <iframe src="https://www.youtube.com/embed/Cn1Lc-7PzLc" title="VR まちがい探し" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 担当箇所 -->
+  <div class="ws">
+    <p class="ws-label">My Role</p>
+    <h2 class="ws-title">担当箇所</h2>
+    <div class="roles-list">
+      <div class="role-item">ゲームプランナー — ゲームルール・レベルデザインの設計</div>
+      <div class="role-item">プロジェクトマネージャー — チーム進行管理</div>
+      <div class="role-item">UI/UX およびレベルデザインの監修</div>
+      <div class="role-item">メインプログラマー — 一部分を除くシステム全体を実装</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 技術的工夫 -->
+  <div class="ws">
+    <p class="ws-label">Technical Highlight</p>
+    <h2 class="ws-title">設計上の工夫</h2>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <h4>ObjectController.cs</h4>
+        <p>
+          オブジェクト自身に「まちがい」の判定ロジックを持たせる設計。
+          ホバー時に MaterialPropertyBlock で色を薄く変化させる視覚的フィードバックを実装し、
+          メモリリークを回避（shared material を変更しない）。
+          正解・不正解の結果のみを GameFlow.cs に通知する責務の分離。
+        </p>
+      </div>
+      <div class="arch-card">
+        <h4>GameFlow.cs</h4>
+        <p>
+          ゲーム全体の進行を一元管理するコントローラークラス。
+          ObjectController からの通知を受け取り、サウンド再生・UI遷移・パーティクル再生などを指示。
+          コルーチンによる非同期ゲーム進行で、タイマーやカウントダウン演出も管理。
+        </p>
+      </div>
+    </div>
+    <pre class="code-block"><code><span class="cm">// ObjectController.cs — ホバー時のマテリアル変更（メモリリーク回避）</span>
+<span class="kw">public void</span> <span class="mt">ifHover</span>()
+{
+    <span class="kw">if</span> (gameFlow.inGame)
+    {
+        rend.<span class="mt">GetPropertyBlock</span>(M_propBlock);
+        M_propBlock.<span class="mt">SetColor</span>(<span class="nm">"_EmissionColor"</span>, emitColor);
+        rend.<span class="mt">SetPropertyBlock</span>(M_propBlock);  <span class="cm">// shared material を汚さない</span>
+    }
+}
+
+<span class="kw">public void</span> <span class="mt">ifUnHover</span>()
+{
+    <span class="kw">if</span> (gameFlow.inGame)
+    {
+        rend.<span class="mt">GetPropertyBlock</span>(M_propBlock);
+        M_propBlock.<span class="mt">SetColor</span>(<span class="nm">"_EmissionColor"</span>, <span class="tp">Color</span>.black);
+        rend.<span class="mt">SetPropertyBlock</span>(M_propBlock);
+    }
+}</code></pre>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 使用技術 -->
+  <div class="ws">
+    <p class="ws-label">Tech Stack</p>
+    <h2 class="ws-title">使用技術</h2>
+    <div class="tech-tags">
+      <span class="tag">Unity</span>
+      <span class="tag">C#</span>
+      <span class="tag">XR Interaction Toolkit</span>
+      <span class="tag">Meta XR SDK</span>
+      <span class="tag">MaterialPropertyBlock</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="work-nav">
+  <a class="work-nav-btn" href="neon-ar.html">
+    <span class="work-nav-dir">← Prev</span>
+    <span class="work-nav-name">Neon AR</span>
+  </a>
+  <a class="work-nav-btn right" href="vr-horror.html">
+    <span class="work-nav-dir">Next →</span>
+    <span class="work-nav-name">VR ホラー</span>
+  </a>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  function openLightbox(el) {
+    document.getElementById('lightbox-img').src = el.querySelector('img').src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>

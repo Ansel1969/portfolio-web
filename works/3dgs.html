@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Gaussian Splatting | 宮﨑 左京</title>
+  <link rel="stylesheet" href="../css/work.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">SM</a>
+  <a class="nav-back" href="../index.html#works">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4L6 8l4 4"/></svg>
+    Works 一覧
+  </a>
+</nav>
+
+<div class="work-hero">
+  <div class="work-hero-inner">
+    <p class="work-cat">02 — Engagesoft Internship / R&D</p>
+    <h1 class="work-title">3D Gaussian Splatting<br>技術検証・開発</h1>
+    <p class="work-tagline">動画から生成した3DGSデータをXR空間にインタラクティブ配置するアプリ</p>
+    <div class="work-meta">
+      <div class="meta-item"><span class="meta-label">形態</span><span class="meta-value">インターン・R&D</span></div>
+      <div class="meta-item"><span class="meta-label">想定用途</span><span class="meta-value">自動車関連事業</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="work-content">
+
+  <!-- 概要 -->
+  <div class="ws">
+    <p class="ws-label">Overview</p>
+    <h2 class="ws-title">概要</h2>
+    <div class="ws-body">
+      <p>
+        スマートフォン等で撮影した動画から3DGS（3D Gaussian Splatting）データを生成し、
+        アプリ上で必要なオブジェクト（車など）の範囲を指定して切り取り、XR空間に配置・表示するアプリケーション。
+      </p>
+      <p>
+        自動車関連事業における活用を見据え、背景などの不要なデータを取り除いて
+        対象オブジェクトだけをインタラクティブに動かしたり配置したりできるシステムの検証・開発を行った。
+        3DGSはNeRF系の手法と比較して高速なレンダリングが可能な点が特長であり、リアルタイムのXR体験への組み込みに向けた可能性を探った。
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ギャラリー -->
+  <div class="ws">
+    <p class="ws-label">Gallery</p>
+    <h2 class="ws-title">フォト</h2>
+    <div class="gallery">
+      <div class="gallery-main" onclick="openLightbox(this)">
+        <img src="img/3dgs_00.jpg" alt="3DGS — AR画面での車の表示">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/3dgs_01.jpg" alt="切り取りUI">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 動画 -->
+  <div class="ws">
+    <p class="ws-label">Media</p>
+    <h2 class="ws-title">デモ動画</h2>
+    <div class="media-grid">
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/54fgipP8JoE" title="切り取り中の様子" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/QHp7ze4EO6c" title="AR画面での見え方" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 担当箇所 -->
+  <div class="ws">
+    <p class="ws-label">My Role</p>
+    <h2 class="ws-title">担当箇所</h2>
+    <div class="roles-list">
+      <div class="role-item">3DGSデータ生成パイプラインの構築・検証</div>
+      <div class="role-item">アプリ上での範囲指定（切り取り）UIの実装</div>
+      <div class="role-item">XR空間への3DGSオブジェクト配置・インタラクション実装</div>
+      <div class="role-item">背景データ除去と対象オブジェクト抽出の精度検証</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 使用技術 -->
+  <div class="ws">
+    <p class="ws-label">Tech Stack</p>
+    <h2 class="ws-title">使用技術</h2>
+    <div class="tech-tags">
+      <span class="tag">Unity</span>
+      <span class="tag">C#</span>
+      <span class="tag">Python</span>
+      <span class="tag">3D Gaussian Splatting</span>
+      <span class="tag">ARFoundation</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="work-nav">
+  <a class="work-nav-btn" href="school-defense.html">
+    <span class="work-nav-dir">← Prev</span>
+    <span class="work-nav-name">僕らの学校防衛戦</span>
+  </a>
+  <a class="work-nav-btn right" href="neon-ar.html">
+    <span class="work-nav-dir">Next →</span>
+    <span class="work-nav-name">Neon AR</span>
+  </a>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  function openLightbox(el) {
+    document.getElementById('lightbox-img').src = el.querySelector('img').src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>

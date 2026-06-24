@@ -1,0 +1,15 @@
+# 一時ファイル（PDF書き出し時の中間画像）
+works/img/page_*.png
+
+# 一時ファイル（PPTXから抽出した生の中間画像）
+works/img/slide*.png
+works/img/slide*.jpg
+
+# PDF（ポートフォリオ原本）
+*.pdf
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

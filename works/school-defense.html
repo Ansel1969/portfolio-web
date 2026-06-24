@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>僕らの学校防衛戦 | 宮﨑 左京</title>
+  <link rel="stylesheet" href="../css/work.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">SM</a>
+  <a class="nav-back" href="../index.html#works">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4L6 8l4 4"/></svg>
+    Works 一覧
+  </a>
+</nav>
+
+<div class="work-hero">
+  <div class="work-hero-inner">
+    <p class="work-cat">02 — Engagesoft Internship / MR Game</p>
+    <h1 class="work-title">僕らの学校防衛戦</h1>
+    <p class="work-tagline">廃校の実際の廊下空間を舞台にしたMR（複合現実）ゲーム</p>
+    <div class="work-meta">
+      <div class="meta-item"><span class="meta-label">出展</span><span class="meta-value">NAGOFES 2025</span></div>
+      <div class="meta-item"><span class="meta-label">会場</span><span class="meta-value">なごのキャンパス（旧那古野小学校）</span></div>
+      <div class="meta-item"><span class="meta-label">形態</span><span class="meta-value">チーム開発（インターン）</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="work-content">
+
+  <!-- 概要 -->
+  <div class="ws">
+    <p class="ws-label">Overview</p>
+    <h2 class="ws-title">概要</h2>
+    <div class="ws-body">
+      <p>
+        インキュベーション施設「なごのキャンパス」で開催された『NAGOFES 2025』にて、
+        廃校（旧那古野小学校）の「実際の廊下空間」を舞台にしたMR（複合現実）ゲームを出展。
+      </p>
+      <p>
+        現実の廊下に仮想の敵キャラクターが出現し、プレイヤーが撃退していくシューティング型のゲームプレイ。
+        マルチプレイに対応し、複数人で同一の現実空間をシェアしながら協力・競争できる体験を実現した。
+        空間のオクルージョンを精密に設定することで、仮想オブジェクトが現実の建物構造に自然に溶け込む演出を実現した。
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ギャラリー -->
+  <div class="ws">
+    <p class="ws-label">Gallery</p>
+    <h2 class="ws-title">フォト</h2>
+    <div class="gallery">
+      <div class="gallery-main" onclick="openLightbox(this)">
+        <img src="img/school-def_00.jpg" alt="僕らの学校防衛戦 — MRプレイ画面">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/school-def_01.jpg" alt="プレイヤー視点">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 動画 -->
+  <div class="ws">
+    <p class="ws-label">Media</p>
+    <h2 class="ws-title">プレイデモ動画</h2>
+    <div class="media-grid">
+      <div class="yt-wrap">
+        <!--
+          YouTube埋め込み①: srcを実際のURLに変更
+          例: src="https://www.youtube.com/embed/XXXXXXXXXX"
+        -->
+        <iframe src="https://www.youtube.com/embed/rg7sBXZOkFE" title="プレイデモ動画 ①" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/t-k-ppFKEnc" title="プレイデモ動画 ②" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 担当箇所 -->
+  <div class="ws">
+    <p class="ws-label">My Role</p>
+    <h2 class="ws-title">担当箇所</h2>
+    <div class="roles-list">
+      <div class="role-item">ゲーム全般の開発をメインで担当</div>
+      <div class="role-item">マルチプレイを意識した敵キャラクターの動的生成ロジックの構築</div>
+      <div class="role-item">当たり判定・イベント・スコア計算ロジックの実装</div>
+      <div class="role-item">オクルージョン設定と現実空間への位置合わせ</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 使用技術 -->
+  <div class="ws">
+    <p class="ws-label">Tech Stack</p>
+    <h2 class="ws-title">使用技術</h2>
+    <div class="tech-tags">
+      <span class="tag">Unity</span>
+      <span class="tag">C#</span>
+      <span class="tag">Meta XR SDK</span>
+      <span class="tag">MR Occlusion</span>
+      <span class="tag">Multiplayer</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="work-nav">
+  <a class="work-nav-btn" href="boss-strike.html">
+    <span class="work-nav-dir">← Prev</span>
+    <span class="work-nav-name">BOSS STRIKE</span>
+  </a>
+  <a class="work-nav-btn right" href="3dgs.html">
+    <span class="work-nav-dir">Next →</span>
+    <span class="work-nav-name">3D Gaussian Splatting</span>
+  </a>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  function openLightbox(el) {
+    document.getElementById('lightbox-img').src = el.querySelector('img').src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR ホラー | 宮﨑 左京</title>
+  <link rel="stylesheet" href="../css/work.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="../index.html">SM</a>
+  <a class="nav-back" href="../index.html#works">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4L6 8l4 4"/></svg>
+    Works 一覧
+  </a>
+</nav>
+
+<div class="work-hero">
+  <div class="work-hero-inner">
+    <p class="work-cat">03 — Artechs Works / VR Horror Game</p>
+    <h1 class="work-title">VR ホラー</h1>
+    <p class="work-tagline">限られた物理スペースでもユーザーが安全かつ快適に体験できる設計と、<br>ホラー本来の純粋な恐怖に能動的なゲーム性を融合した「真のVRホラー」</p>
+    <div class="work-meta">
+      <div class="meta-item"><span class="meta-label">形態</span><span class="meta-value">チーム開発（Artechs）</span></div>
+      <div class="meta-item"><span class="meta-label">デバイス</span><span class="meta-value">Meta Quest</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="work-content">
+
+  <!-- 概要 -->
+  <div class="ws">
+    <p class="ws-label">Overview</p>
+    <h2 class="ws-title">概要</h2>
+    <div class="ws-body">
+      <p>
+        10年前に閉鎖され、かつて人体実験が行われていたと噂される廃研究所。
+        プレイヤーはオカルト新聞記者として潜入するが、運悪く施設内に閉じ込められてしまう。
+        迫りくる「何か」の恐怖を退けながら、施設からの脱出を目指すホラーゲーム。
+      </p>
+      <p>
+        イベント展示という制約（限られた物理スペース・不特定多数が体験）の中で、
+        ステーショナリーモードを活かした安全設計と、純粋なホラー体験の両立を目指した。
+        パズル要素とホラーの融合で「受動的に怖がるだけでなく、能動的に行動できる」体験を設計。
+        Meta Haptics Studio による触覚フィードバックで没入感をさらに高めた。
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ギャラリー -->
+  <div class="ws">
+    <p class="ws-label">Gallery</p>
+    <h2 class="ws-title">フォト</h2>
+    <div class="gallery">
+      <div class="gallery-main" onclick="openLightbox(this)">
+        <img src="img/vr-horror_00.jpg" alt="VRホラー — ゲーム画面 (敵キャラ)">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/vr-horror_01.jpg" alt="VRホラー — マップビュー">
+        </div>
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/vr-horror_02.jpg" alt="VRホラー — セキュリティカード">
+        </div>
+        <div class="gallery-thumb" onclick="openLightbox(this)">
+          <img src="img/vr-horror_03.jpg" alt="VRホラー — パズルギミック">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 動画 -->
+  <div class="ws">
+    <p class="ws-label">Media</p>
+    <h2 class="ws-title">プレイ動画</h2>
+    <div class="media-grid">
+      <div class="yt-wrap">
+        <!--
+          YouTube埋め込み「VRホラー」: srcを実際のURLに変更
+          例: src="https://www.youtube.com/embed/XXXXXXXXXX"
+        -->
+        <iframe src="https://www.youtube.com/embed/kV8Z2Q_aook" title="VR ホラー" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 担当箇所 -->
+  <div class="ws">
+    <p class="ws-label">My Role</p>
+    <h2 class="ws-title">担当箇所</h2>
+    <div class="roles-list">
+      <div class="role-item">ゲームプランナー — ストーリー・ゲームフロー・恐怖演出の設計</div>
+      <div class="role-item">プロジェクトマネージャー — タスク管理・スケジュール調整</div>
+      <div class="role-item">コンテンツ全体のクオリティ監修</div>
+      <div class="role-item">VR環境基盤の構築（プレイヤーリグ・ステーショナリー設計）</div>
+      <div class="role-item">チュートリアルの設計・実装</div>
+      <div class="role-item">パズルギミックの実装（サポートとして参加）</div>
+      <div class="role-item">SE・視覚的演出（スクリーンシェイク・暗転・フラッシュ等）の実装</div>
+      <div class="role-item">Meta Haptics Studio を活用した触覚フィードバックの実装</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 使用技術 -->
+  <div class="ws">
+    <p class="ws-label">Tech Stack</p>
+    <h2 class="ws-title">使用技術</h2>
+    <div class="tech-tags">
+      <span class="tag">Unity</span>
+      <span class="tag">C#</span>
+      <span class="tag">Meta XR SDK</span>
+      <span class="tag">Meta Haptics Studio</span>
+      <span class="tag">XR Interaction Toolkit</span>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 開催実績 -->
+  <div class="ws">
+    <p class="ws-label">Events</p>
+    <h2 class="ws-title">開催実績</h2>
+    <div class="events-list">
+      <div class="event-item"><span class="event-date">2024 / 11</span><span class="event-name">名城大学大学祭 — VRコンテンツ初挑戦《VRお化け屋敷》</span></div>
+      <div class="event-item"><span class="event-date">2025 / 10</span><span class="event-name">名城大学大学祭 — 体験・クオリティをアップデート《VRホラー》</span></div>
+      <div class="event-item"><span class="event-date">2025 / 11</span><span class="event-name">XRMeetup Aichi 出展 — XR専門家・エンジニアよりフィードバック取得</span></div>
+      <div class="event-item"><span class="event-date">2026 / 05</span><span class="event-name">AICHI TECH DAY 2026 — 小中学生向け展示</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="work-nav">
+  <a class="work-nav-btn" href="vr-machigai.html">
+    <span class="work-nav-dir">← Prev</span>
+    <span class="work-nav-name">VR まちがい探し</span>
+  </a>
+  <span></span>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  function openLightbox(el) {
+    document.getElementById('lightbox-img').src = el.querySelector('img').src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>
